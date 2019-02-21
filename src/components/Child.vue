@@ -5,14 +5,13 @@
     check out the
     <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
   </p>
-  <div>{{abc}}</div>
   </section>
 </template>
 <script>
 import axios from "axios";
 import mock from "fetch-mock";
 mock.once("https://api.doorkeeper.jp/", {
-  eee: 333
+  data: 333
 });
 export default {
   name: "Child",
@@ -24,7 +23,7 @@ export default {
   created: function() {
     axios
       .get("https://api.doorkeeper.jp/")
-      .then(response => (this.abc = response));
+      .then(response => (this.abc = response.data));
   }
 };
 </script>

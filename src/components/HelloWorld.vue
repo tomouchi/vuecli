@@ -30,12 +30,12 @@
 import Child from "./Child";
 
 export default {
-  name: 'HelloWorld',
-  components: {Child},
+  name: "HelloWorld",
+  components: { Child },
   props: {
     msg: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
